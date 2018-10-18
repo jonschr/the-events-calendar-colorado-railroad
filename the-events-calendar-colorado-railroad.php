@@ -30,7 +30,7 @@ define( 'TEC_RAILROAD', dirname( __FILE__ ) );
 define ( 'TEC_RAILROAD_VERSION', '0.1.0' );
 
 //* Enqueue Scripts and Styles
-add_action( 'wp_enqueue_scripts', 'tecrailroad_enqueue_scripts_styles' );
+add_action( 'wp_enqueue_scripts', 'tecrailroad_enqueue_scripts_styles', 999 );
 function tecrailroad_enqueue_scripts_styles() {
 
     //* Don't add these scripts and styles to the admin side of the site
@@ -40,7 +40,10 @@ function tecrailroad_enqueue_scripts_styles() {
     //* Enqueue main style
     wp_enqueue_style( 'tecrailroad-styles', plugin_dir_url( __FILE__ ) . 'css/tecrailroad-styles.css', array(), TEC_RAILROAD_VERSION, 'screen' );
 
-    //* Google maps scrollfix
-    // wp_register_script( 'google-maps-scrollfix', plugin_dir_url( __FILE__ ) . 'js/google-maps-scrollfix.js', array( 'jquery' ), TEC_RAILROAD_VERSION, true );
+    //* Fully remove the styles added by the template-events-calendar plugin. We love their layout, not their styles
+    wp_deregister_style( 'boot-cdn' );
+    wp_deregister_style('ect-default-styles');
+    wp_deregister_style('ect-classic-list-styles');
+    wp_deregister_style('ect-timeline-styles');
 
 }
