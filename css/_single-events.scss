@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Styles for single events
+   ========================================================================== */
+
+body.single-tribe_events {
+    .tribe-events-event-image {
+        display: none;
+    }
+
+    h1.tribe-events-single-event-title {
+        font-family: "Libre Baskerville", Sans-serif;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .tribe-events-schedule {
+        text-transform: uppercase;
+    }
+}

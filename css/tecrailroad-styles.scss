@@ -3,7 +3,7 @@
    ========================================================================== */
 
 $light: #f0ebe5;
-$black: black;
+$black: #3e4758;
 $red: #c5171e;
 
 /* ==========================================================================
@@ -41,4 +41,8 @@ $desktop-width-section: 1200px;
 /* Defaults
    ========================================================================== */
 
+@import "buttons";
 @import "shortcode";
+@import "event-wrappers";
+@import "single-events";
+@import "events-archive";

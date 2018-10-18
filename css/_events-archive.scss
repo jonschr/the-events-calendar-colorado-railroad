@@ -1,0 +1,63 @@
+/* ==========================================================================
+   Styles for the events archive
+   ========================================================================== */
+
+body.post-type-archive-tribe_events {
+    /* Search bar
+       ========================================================================== */
+
+    .tribe-bar-views-inner,
+    #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+        background-color: white;
+    }
+
+    #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a:hover {
+        background-color: darken($light, 10%);
+    }
+
+    #tribe-bar-form .tribe-bar-submit input[type=submit] {
+        background: $red;
+
+        &:hover {
+            background-color: darken($red, 5%);
+        }
+    }
+
+    /* Calendar
+       ========================================================================== */
+
+    .tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a {
+        background: $black;
+    }
+
+    .tribe-events-past,
+    #tribe-events-content .tribe-events-calendar td.tribe-events-othermonth {
+        background: darken($light, 10%);
+    }
+
+    .tribe-events-present {
+        background: white;
+    }
+
+    table.tribe-events-calendar {
+        th {
+            background-color: $red;
+            border: none;
+        }
+    }
+
+    .tribe-events-thismonth.tribe-events-future {
+        background: white;
+    }
+
+    #tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a {
+        background: $red;
+    }
+
+    .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"], .tribe-events-calendar td.tribe-events-past div[id*="tribe-events-daynum-"] > a,
+    .tribe-events-calendar td.tribe-events-othermonth.tribe-events-future div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-othermonth.tribe-events-future div[id*=tribe-events-daynum-] > a {
+        background: darken($light, 15%);
+        color: $black;
+        opacity: 1;
+    }
+}

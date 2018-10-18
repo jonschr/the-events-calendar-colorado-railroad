@@ -1,0 +1,25 @@
+/* ==========================================================================
+   General event styles
+   ========================================================================== */
+
+body.post-type-archive-tribe_events,
+body.single-tribe_events {
+    background-color: darken($light, 2%);
+
+    .site-content {
+        @include desktop {
+            padding-top: 240px;
+            padding-bottom: 70px;
+        }
+    }
+
+    a:not(.generate-back-to-top) {
+        color: $red;
+    }
+
+    #tribe-events {
+        .tribe-events-button {
+            @extend .button-custom;
+        }
+    }
+}
