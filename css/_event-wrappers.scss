@@ -11,6 +11,18 @@ body.single-tribe_events {
             padding-top: 240px;
             padding-bottom: 70px;
         }
+
+
+        @include tablet {
+            padding-top: 240px;
+            padding-bottom: 70px;
+        }
+
+
+        @include mobile {
+            padding-top: 120px;
+            padding-bottom: 0;
+        }
     }
 
     a:not(.generate-back-to-top) {

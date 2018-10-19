@@ -23,6 +23,10 @@ body.post-type-archive-tribe_events {
         }
     }
 
+    .tribe-events-list-separator-month span {
+        background: darken($light, 2%);
+    }
+
     /* Calendar
        ========================================================================== */
 
@@ -59,5 +63,61 @@ body.post-type-archive-tribe_events {
         background: darken($light, 15%);
         color: $black;
         opacity: 1;
+    }
+
+    /* Agenda
+       ========================================================================== */
+
+    h3.tribe-events-list-event-title {
+        font-family: "Libre Baskerville", Sans-serif;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
+    .tribe-event-schedule-details {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .tribe-events-list-event-description {
+        padding: 0;
+        margin: 0;
+    }
+
+    #tribe-events .tribe-events-content p, .tribe-events-after-html p, .tribe-events-before-html p {
+        line-height: 1.4em;
+        font-size: 16px;
+    }
+
+    .tribe-events-event-image {
+        padding-top: 5px;
+    }
+
+    .tribe-events-list .type-tribe_events {
+        margin-bottom: 70px;
+
+        .tribe-events-read-more {
+            @extend .button-custom;
+        }
+    }
+
+    @include mobile {
+        .tribe-events-event-meta {
+            background: transparent;
+            padding: 0;
+            border: none;
+            margin: 0;
+        }
+
+        .tribe-event-schedule-details {
+            padding: 0;
+            margin: 0 0 10px;
+        }
+
+        .tribe-events-venue-details {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
     }
 }

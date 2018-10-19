@@ -22,6 +22,11 @@ body #ect-events-list-content {
         display: flex;
         align-items: center;
 
+        @include mobile {
+            flex-flow: column;
+        }
+
+
         .ect-list-post-left,
         .ect-list-post-right {
             flex: 0 1 auto;
@@ -30,11 +35,25 @@ body #ect-events-list-content {
 
         .ect-list-post-left {
             max-width: calc( 100% / 3 );
+
+            @include mobile {
+                max-width: 100%;
+            }
         }
 
         .ect-list-post-right {
             max-width: calc( 100% / 3 * 2 );
             padding: 0 0 0 25px;
+
+            @include mobile {
+                max-width: 100%;
+                padding: 15px 0 0;
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.3em;
+                }
+            }
         }
 
         .ect-list-img {
@@ -48,12 +67,29 @@ body #ect-events-list-content {
             position: absolute;
             top: 0;
             left: 0;
-            background-color: $red;
+            background-image: url(../images/bannerbkg.jpg);
             color: white !important;
             display: flex;
             flex-flow: column-reverse;
             padding: 20px 20px;
             text-align: center;
+
+            &:after {
+                content: "";
+                height: 0;
+                padding-top: 20%;
+                bottom: 3px;
+                transform: translateY(100%);
+                width: 100%;
+                display: block;
+                position: absolute;
+                background-size: cover;
+                background-position: top center;
+                left: 0;
+                background-image: url(../images/banner.svg);
+                background-size: contain !important;
+                background-repeat: no-repeat;
+            }
 
             .ev-day,
             .ev-mo {
