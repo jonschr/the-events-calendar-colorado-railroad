@@ -45,6 +45,6 @@ function tecrailroad_enqueue_scripts_styles() {
     wp_deregister_style('ect-default-styles');
     wp_deregister_style('ect-classic-list-styles');
     wp_deregister_style('ect-timeline-styles');
-    wp_deregister_style('tf-compiled-options-ect-css');
+    wp_deregister_style('tf-compiled-options-ect');
 
 }
