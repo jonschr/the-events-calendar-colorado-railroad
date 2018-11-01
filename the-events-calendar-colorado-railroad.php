@@ -41,9 +41,10 @@ function tecrailroad_enqueue_scripts_styles() {
     wp_enqueue_style( 'tecrailroad-styles', plugin_dir_url( __FILE__ ) . 'css/tecrailroad-styles.css', array(), TEC_RAILROAD_VERSION, 'screen' );
 
     //* Fully remove the styles added by the template-events-calendar plugin. We love their layout, not their styles
-    wp_deregister_style( 'boot-cdn' );
+    wp_deregister_style('boot-cdn');
     wp_deregister_style('ect-default-styles');
     wp_deregister_style('ect-classic-list-styles');
     wp_deregister_style('ect-timeline-styles');
+    wp_deregister_style('tf-compiled-options-ect-css');
 
 }
