@@ -27,7 +27,7 @@ if ( !defined( 'ABSPATH' ) ) {
 define( 'TEC_RAILROAD', dirname( __FILE__ ) );
 
 // Define the version of the plugin
-define ( 'TEC_RAILROAD_VERSION', '0.1.0' );
+define ( 'TEC_RAILROAD_VERSION', '0.1.1' );
 
 //* Enqueue Scripts and Styles
 add_action( 'wp_enqueue_scripts', 'tecrailroad_enqueue_scripts_styles', 999 );
@@ -44,6 +44,7 @@ function tecrailroad_enqueue_scripts_styles() {
     wp_deregister_style('boot-cdn');
     wp_deregister_style('ect-default-styles');
     wp_deregister_style('ect-classic-list-styles');
+    wp_deregister_style('ect-list-styles');
     wp_deregister_style('ect-timeline-styles');
     wp_deregister_style('tf-compiled-options-ect');
 
